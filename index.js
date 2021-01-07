@@ -9,9 +9,9 @@ function getQuote() {
       success: function(request) {
         randomQuote = request.quoteText;
         randomAuthor = request.quoteAuthor;
-        $('#text').html(randomQuote);
+        $('#text').html(`<i class="fa fa-quote-left fa-2x"></i> `+ randomQuote + ` <i class="fa fa-quote-right fa-2x"></i>`);
         if (randomAuthor === "")        { randomAuthor="Unknown";
-        }    $('#author').html(randomAuthor);
+        }    $('#author').html("- " + randomAuthor);
  },
       error: function(xhr, status, error) 
 {
